@@ -1,0 +1,86 @@
+---
+layout: post
+title:  "React Native, Take One"
+date:   2016-05-05 00:00:00 
+categories: software
+---
+
+<style>
+  .frame-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+    margin: 20px 0 20px 0;
+  }
+
+  .frame-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+So, you wanna write a mobile app, but you already know half a million different
+tools that are suitable for web development, and you can't really stomach
+learning the entire objective-C / swift platform for one little app. Maybe React
+Native is the tool for you? Maybe...
+
+I've been working on a RN app for the last 6-10 weeks and have gone through
+multiple waves of excitement and disappointement while learning the platform.
+While I can't say that I'm completely sold on the product, I will say that my
+team has been able to ship features to an iOS product constitenly over that
+time.
+
+If your first gettign started with RN, and you relate to my opening paragraph, I
+suggest you watch the following video before going any further: 
+
+<div class="frame-container">
+  <iframe style="margin: 0 auto;" width="560" height="315" src="https://www.youtube.com/embed/-XxSCi8TKuk" frameborder="0" allowfullscreen></iframe>
+</div>
+
+Truth is, the majority of my struggles writing a react nativeapp have been due
+to my limitations and understanding of the iOS Xcode platform. If you are
+already familiar with native development, this stuff would probably be a breeze.
+But, if you're already doing a lot of native development, I doubt that you're
+researching react native either.
+
+## My experience
+
+So, for our use case, we were building a small social networking app that
+allows users to post photos and videos and to interact with those posts, very
+similar to that of a facebook group. Seems simple enough, photo upload,
+comments, likes, joining / leaving a group, and following / unfollowing friends.
+The features of a social network can grow kindof out of controll, so we've tried
+to stick with the smallest subset of interactions that would give our users the
+desired experience. Agile right?
+
+Anyways, I'll detail a few of the hurdles that we crossed, things that we maybe
+take for granted coming from the web, and hopefully give you a little direction
+as you're digging for the "right" react native solution. Keep in mind that our
+initial prototype has been built to target iOS, so while many of these learnings
+can be applied to the android environment, I have not personally gone through
+that process.
+
+### 0 - React Setup
+
+- es2015
+- Redux
+- Thunk
+- Fabric
+- CocoaPods (do not use rnpm!)
+
+### 1 - Navigation
+
+- custom, not hard (but why?)
+
+### 2 - Tab Bar
+
+- brought in a custom one (but why?)
+
+### 3 - Photo / Video Upload
+
+- react native image picker
